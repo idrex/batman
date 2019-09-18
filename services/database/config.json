@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root3306",
+    "database": "batman_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "root",
+    "password": "root3306",
+    "database": "batman_uat",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": "root3306",
+    "database": "batman_pro",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
