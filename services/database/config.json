@@ -18,7 +18,7 @@
   "production": {
     "username": "root",
     "password": "root3306",
-    "database": "batman_pro",
+    "database": "batman",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
