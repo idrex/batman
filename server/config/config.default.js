@@ -14,7 +14,6 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1568876092633_3549';
 
-
   // 中间件
   config.middleware = [ 'errorHandler' ];
 
@@ -28,6 +27,7 @@ module.exports = appInfo => {
     database: 'batman_dev',
     define: {
       freezeTableName: true,
+      timestamps: false
     },
   };
 
@@ -53,12 +53,12 @@ module.exports = appInfo => {
     saltRounds: 10, // default 10
   };
 
-  // // 鉴权 json web token
-  // config.jwt = {
-  //   secret: 'idrex',
-  //   enable: true, // default is false
-  //   match: '/jwt', // optional
-  // };
+  // 鉴权 json web token
+  config.jwt = {
+    secret: 'batman',
+    enable: true, // default is false
+    match: '/jwt', // optional
+  };
 
   // // 微信支付
   // config.wechatPay = {

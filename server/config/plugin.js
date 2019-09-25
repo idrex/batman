@@ -25,11 +25,11 @@ module.exports = {
     package: 'egg-sequelize',
   },
 
-  // // 鉴权 json web token
-  // jwt: {
-  //   enable: true,
-  //   package: 'egg-jwt',
-  // },
+  // 鉴权 json web token
+  jwt: {
+    enable: true,
+    package: 'egg-jwt',
+  },
 
   // CORS跨域
   cors: {
