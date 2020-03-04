@@ -7,6 +7,22 @@ module.exports = appInfo => ({
   view: {
     useHashAsset: true,
   },
+  isomorphic: {
+    babel: {
+      plugins: [
+        require.resolve('babel-plugin-dynamic-import-node'),
+        require.resolve('babel-plugin-transform-decorators-legacy'),
+        [require.resolve('babel-plugin-import-inspector'), {
+          serverSideRequirePath: true,
+        }],
+        // [
+        //   require.resolve('babel-plugin-import'),
+        //   { libraryName: 'antd', libraryDirectory: 'es', style: true },
+        // ]
+      ],
+      extensions: ['.js', '.jsx', '.mjs'],
+    },
+  },
   static: {
     dir: [
       {
