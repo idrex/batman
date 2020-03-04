@@ -1,14 +1,31 @@
 {
-  "name": "beidou-example-with-dva",
-  "version": "2.2.1",
-  "description": "Beidou example with dva",
+  "name": "batman",
+  "version": "0.0.1",
+  "description": "beidou example simple",
   "scripts": {
     "start": "beidou start",
     "debug": "beidou debug",
     "stop": "beidou stop",
     "dev": "beidou dev",
     "build": "beidou build",
-    "build:node": "beidou build --target=node"
+    "build:node": "beidou build --target=node",
+    "lint": "eslint --fix --ext .jsx,.js app client config"
+  },
+  "author": "Drex",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-beidou": "^2.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "beidou": "^2.2.1",
+    "beidou-cli": "^2.1.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hot-loader": "^4.12.19"
   },
   "browserslist": [
     ">1%",
@@ -16,14 +33,8 @@
     "Firefox ESR",
     "not ie < 9"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "beidou": "^2.2.1",
-    "beidou-cli": "^2.1.1",
-    "dva": "^2.1.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+  "engines": {
+    "node": ">= 10.0.0"
   },
-  "gitHead": "b601b857e2d005cdad7cb7b73462a7e02f23f8e9"
+  "license": "MIT"
 }
