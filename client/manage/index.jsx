@@ -2,16 +2,19 @@
 import React from 'react';
 import dva from 'dva';
 import { memoryHistory } from 'dva/router';
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import createLoading from 'dva-loading';
-import Routers from './pages/router';
+import Routers from './routers/router';
+import global from './models/global';
+import setting from './models/setting';
+import account from './models/account';
 import './index.less'
 function createApp(opts) {
   const app = dva(opts);
-  // app.model(require('./models/global').default);
-  // app.model(require('./models/setting').default);
+  app.model(global);
+  app.model(setting);
   // app.model(require('./models/logger').default);
-  // app.model(require('./models/account').default);
+  app.model(account);
   app.use(createLoading());
   app.router(Routers);
   return app;
@@ -19,12 +22,9 @@ function createApp(opts) {
 
 export default class Index extends React.Component {
   static getPartial() {
-    console.log(123123);
     let app = createApp({
       history: memoryHistory,
-      initialState: {
-        
-      },
+      initialState: {},
     });
     return {
       html: app.start()()
@@ -56,7 +56,7 @@ export default class Index extends React.Component {
 
 if (__CLIENT__) {
   const app = createApp({
-    history: createHistory(),
+    history: createBrowserHistory(),
     initialState: {},
   });
   // 5. Start

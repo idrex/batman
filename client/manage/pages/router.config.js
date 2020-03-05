@@ -46,7 +46,7 @@ export const loginRouter = [
 ]
 export const routes = [
   {
-    path: '/auth/users',
+    path: '/manage/users',
     name: 'users',
     component: (app) => Loadable.Map({
       loader: {

@@ -7,6 +7,14 @@ module.exports = appInfo => ({
   view: {
     useHashAsset: true,
   },
+  react: {
+    static: true,
+  },
+  webpack: {
+    custom: {
+      configPath: path.resolve(__dirname, './webpack.config.js'),
+    }
+  },
   isomorphic: {
     babel: {
       plugins: [
