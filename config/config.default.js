@@ -10,11 +10,12 @@ module.exports = appInfo => ({
   react: {
     static: true,
   },
-  webpack: {
-    custom: {
-      configPath: path.resolve(__dirname, './webpack.config.js'),
-    }
-  },
+  // webpack: {
+  //   custom: {
+  //     configPath: path.resolve(__dirname, './webpack.config.js'),
+  //   }
+  // },
+  // 同构配置
   isomorphic: {
     babel: {
       plugins: [
@@ -42,5 +43,14 @@ module.exports = appInfo => ({
         dir: path.join(appInfo.baseDir, '/build'),
       },
     ],
+  },
+  security: {
+    csrf: {
+      enable: false,
+    },
+    methodnoallow: {
+      enable: false,
+    },
+    domainWhiteList: [ 'http://localhost:6001', 'http://localhost:6002' ],
   },
 });

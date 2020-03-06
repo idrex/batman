@@ -59,14 +59,14 @@ export default {
     primaryColor: '#1890ff',// 主题色
     layout: 'sidemenu',// 导航位置 `sidemenu` | `topmenu`
     contentWidth: 'Fluid',// 导航位置topmenu时，内容的布局才起作用`Fluid` | `Fixed`
-    fixedHeader: false,// 是否固定 header 到顶部
+    fixedHeader: true,// 是否固定 header 到顶部
     autoHideHeader: false,// 自动隐藏标题
-    fixSiderbar: false,// 是否固定导航
+    fixSiderbar: true,// 是否固定导航
     colorWeak: false,
     menu: {
       locale: true,
     },
-    title: 'Ant Design Pro',
+    title: 'Batman System',
     pwa: false,
     iconfontUrl: '',
   },

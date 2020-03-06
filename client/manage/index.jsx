@@ -5,16 +5,19 @@ import { memoryHistory } from 'dva/router';
 import { createBrowserHistory } from 'history';
 import createLoading from 'dva-loading';
 import Routers from './routers/router';
-import global from './models/global';
-import setting from './models/setting';
-import account from './models/account';
+// import global from './models/global';
+// import setting from './models/setting';
+// import account from './models/account';
+import models from './models/models';
 import './index.less'
+
 function createApp(opts) {
   const app = dva(opts);
-  app.model(global);
-  app.model(setting);
+  // app.model(global);
+  // app.model(setting);
+  models(app);
   // app.model(require('./models/logger').default);
-  app.model(account);
+  // app.model(account);
   app.use(createLoading());
   app.router(Routers);
   return app;
@@ -42,7 +45,7 @@ export default class Index extends React.Component {
           <link rel="stylesheet" href={helper.asset('manage.css')} /> 
         </head>
         <body>
-          <link rel="stylesheet/less" type="text/css" href={helper.asset('color.less')}/>
+          {/* <link rel="stylesheet/less" type="text/css" href={helper.asset('color.less')}/> */}
           <script dangerouslySetInnerHTML={{ __html: `window.less={async: true,env: 'production', javascriptEnabled: true};` }} />
           <script type="text/javascript" src="https://gw.alipayobjects.com/os/lib/less.js/3.8.1/less.min.js"></script>
           <div id="manage" dangerouslySetInnerHTML={{ __html: html }} />

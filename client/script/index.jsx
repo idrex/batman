@@ -24,6 +24,7 @@ export default class View extends React.Component {
         <head>
           <title>Script</title>
           <link rel="stylesheet" href={helper.asset('script.css')} />
+          <link rel="stylesheet" href={helper.asset('manage.css')} />
         </head>
         <body>
           <div id="container" dangerouslySetInnerHTML={{ __html: html }} />

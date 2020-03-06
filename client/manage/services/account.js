@@ -1,7 +1,7 @@
 //用户登录
 import request from '../utils/request';
 export async function login(params) {
-  return request('/api/user/access/login', {
+  return request('/api/manage/login', {
     method: 'POST',
     body: params,
   });
@@ -16,10 +16,9 @@ export async function logout(params) {
 }
 
 // 获取单前用户信息
-export async function queryCurrent(params) {
-  return request('/api/user/access/current', {
+export async function getAccount() {
+  return request('/api/manage/account', {
     method: 'GET',
-    body: params,
   });
 }
 
